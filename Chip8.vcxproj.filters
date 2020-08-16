@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Games">
+      <UniqueIdentifier>{7f9c34de-7f98-4048-9dc5-87148a2cfdcd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Computer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiquidClearDisplay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiquidClearDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Games\15PUZZLE">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\BLINKY">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\BLITZ">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\BRIX">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\CONNECT4">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\GUESS">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\HIDDEN">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\INVADERS">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\KALEID">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\MAZE">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\MERLIN">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\MISSILE">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\PONG">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\PONG2">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\PUZZLE">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\SYZYGY">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\TANK">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\TETRIS">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\TICTAC">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\UFO">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\VBRIX">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\VERS">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+    <None Include="Games\WIPEOFF">
+      <Filter>Resource Files\Games</Filter>
+    </None>
+  </ItemGroup>
+</Project>
