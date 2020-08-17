@@ -264,16 +264,17 @@ void ExecuteInsruction(char* draw_flag) {
 					break;
 				case 0x0055: //LD [I], Vx
 					reg = (0x0F00 & opcode) >> 8;
-
-					for (int i = 0; i < reg; i++)
+					
+					for (int i = 0; i <= reg; i++)
 						memory[index_register + i] = registers[i];
 					program_counter_register += 2;
 					break;
 				case 0x0065: //LD Vx, [I]
 					reg = (0x0F00 & opcode) >> 8;
 
-					for (int i = 0; i < reg; i++)
+					for (int i = 0; i <= reg; i++)
 						registers[i] = memory[index_register + i];
+
 					program_counter_register += 2;
 					break;
 				default:
