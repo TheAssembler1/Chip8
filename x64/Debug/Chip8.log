@@ -1,0 +1,42 @@
+﻿  Computer.c
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Computer.c(176,56): warning C4013: 'GenerateRandByte' undefined; assuming extern returning int
+  Entry.c
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Entry.c(43,45): warning C4244: '=': conversion from 'Uint64' to 'int', possible loss of data
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Entry.c(34,1): warning C4244: 'initializing': conversion from 'Uint64' to 'int', possible loss of data
+  Input.c
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Input.c(10,9): warning C4013: 'printf' undefined; assuming extern returning int
+  LiquidClearDisplay.c
+  Memory.c
+  Setup.c
+  Sound.c
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Sound.c(4,6): warning C4133: 'function': incompatible types - from 'int **' to 'Uint8 **'
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Sound.c(5,9): warning C4013: 'printf' undefined; assuming extern returning int
+C:\Users\TheAssembler\source\repos\Chip8\Chip8\Sound.c(23,24): warning C4133: 'function': incompatible types - from 'int *' to 'Uint8 *'
+  Generating Code...
+Entry.obj : error LNK2019: unresolved external symbol SDL_DestroyWindow referenced in function SDL_main
+Entry.obj : error LNK2019: unresolved external symbol SDL_SetRenderDrawColor referenced in function SDL_main
+LiquidClearDisplay.obj : error LNK2001: unresolved external symbol SDL_SetRenderDrawColor
+Entry.obj : error LNK2019: unresolved external symbol SDL_RenderClear referenced in function SDL_main
+Entry.obj : error LNK2019: unresolved external symbol SDL_RenderPresent referenced in function SDL_main
+Entry.obj : error LNK2019: unresolved external symbol SDL_DestroyRenderer referenced in function SDL_main
+Entry.obj : error LNK2019: unresolved external symbol SDL_GetPerformanceCounter referenced in function SDL_main
+Entry.obj : error LNK2019: unresolved external symbol SDL_GetPerformanceFrequency referenced in function SDL_main
+Input.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function UpdateInput
+LiquidClearDisplay.obj : error LNK2019: unresolved external symbol SDL_RenderFillRect referenced in function UpdateScreen
+Setup.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function CreateWindow
+Setup.obj : error LNK2019: unresolved external symbol SDL_SetWindowSize referenced in function CreateWindow
+Setup.obj : error LNK2019: unresolved external symbol SDL_CreateRenderer referenced in function CreateRenderer
+Setup.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function Setup
+Sound.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function SetupSound
+Sound.obj : error LNK2019: unresolved external symbol SDL_RWFromFile referenced in function SetupSound
+Sound.obj : error LNK2019: unresolved external symbol SDL_OpenAudioDevice referenced in function SetupSound
+Sound.obj : error LNK2019: unresolved external symbol SDL_PauseAudioDevice referenced in function PlayBeep
+Sound.obj : error LNK2019: unresolved external symbol SDL_LoadWAV_RW referenced in function SetupSound
+Sound.obj : error LNK2019: unresolved external symbol SDL_FreeWAV referenced in function CleanupSound
+Sound.obj : error LNK2019: unresolved external symbol SDL_QueueAudio referenced in function PlayBeep
+Sound.obj : error LNK2019: unresolved external symbol SDL_CloseAudioDevice referenced in function CleanupSound
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\TheAssembler\SDL2-2.0.12\lib\x86\SDL2test.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\TheAssembler\SDL2-2.0.12\lib\x86\SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\TheAssembler\SDL2-2.0.12\lib\x86\SDL2main.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\TheAssembler\source\repos\Chip8\x64\Debug\Chip8.exe : fatal error LNK1120: 22 unresolved externals

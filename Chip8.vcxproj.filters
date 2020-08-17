@@ -30,9 +30,6 @@
     <ClCompile Include="Computer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LiquidClearDisplay.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,9 +48,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Computer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LiquidClearDisplay.h">

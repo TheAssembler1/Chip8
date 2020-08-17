@@ -32,17 +32,15 @@ void UpdateScreen(SDL_Renderer* renderer) {
 	for (int y = 0; y < WINDOW_HEIGHT_RES; y++) {
 		for (int x = 0; x < WINDOW_WIDTH_RES; x++) {
 			if (screen[(y * WINDOW_WIDTH_RES) + x] == 0) {
-				SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+				SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 				pixel.x = x * WINDOW_SCALE;
 				pixel.y = y * WINDOW_SCALE;
-
 				SDL_RenderFillRect(renderer, &pixel);
 			}
 			else {
 				SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 				pixel.x = x * WINDOW_SCALE;
 				pixel.y = y * WINDOW_SCALE;
-
 				SDL_RenderFillRect(renderer, &pixel);
 			}
 		}

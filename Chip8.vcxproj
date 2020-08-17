@@ -158,7 +158,6 @@
     <ClCompile Include="Memory.c" />
     <ClCompile Include="Setup.c" />
     <ClCompile Include="Sound.c" />
-    <ClCompile Include="Timer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Computer.h" />
@@ -167,7 +166,6 @@
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Setup.h" />
     <ClInclude Include="Sound.h" />
-    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Games\15PUZZLE" />

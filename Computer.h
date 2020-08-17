@@ -9,6 +9,8 @@
 #define REGISTER_SIZE 16
 #define STACK_SIZE 16
 
+#define CPU_RATE 500
+
 unsigned char registers[16];
 unsigned short index_register;
 unsigned short program_counter_register;

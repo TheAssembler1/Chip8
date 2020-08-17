@@ -3,7 +3,6 @@
 #include "Setup.h"
 #include "Memory.h"
 #include "Computer.h"
-#include "Timer.h"
 #include "LiquidClearDisplay.h"
 #include "Input.h"
 #include "Sound.h"
@@ -14,13 +13,6 @@ int main(int arc, char* argv[]) {
 	char running;
 	char draw_flag;
 
-	uint64_t frame_ticks;
-	struct Timer fps_timer;
-	struct Timer cap_timer;
-	float avg_fps;
-	int counted_frames;
-	const float SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
-
 	Setup();
 	SetupSound();
 
@@ -29,41 +21,54 @@ int main(int arc, char* argv[]) {
 	running = 1;
 
 	SetupMemory();
-	LoadGame("../Chip8/Games/INVADERS");
+	LoadGame(GAMETITLE);
 	DumpMemory();
 
 	SetupComputer();
-
-	Timer_Init(&fps_timer);
-	Timer_Init(&cap_timer);
-	avg_fps = 0;
-	counted_frames = 0;
 
 	ClearInput();
 	SetupScreen();
 
 	draw_flag = 0;
 
+	int current_time = SDL_GetPerformanceCounter();
+	int last_time = 0;
+	double delta_time = 0;
+	double time_elapsed = 0;
+	double cpu_time_elapsed = 0;
+
 	while (running) {
-		Timer_Start(&cap_timer);
-		Timer_Part_One(&avg_fps, counted_frames, fps_timer);
 
+		last_time = current_time;
+		current_time = SDL_GetPerformanceCounter();
+		delta_time = (((double)current_time - last_time) * 1000 / (double)SDL_GetPerformanceFrequency());
+		time_elapsed += delta_time;
+		cpu_time_elapsed = time_elapsed;
 
-		if (draw_flag == 1) {
-			SDL_RenderClear(renderer);
-			UpdateScreen(renderer);
-			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-			SDL_RenderPresent(renderer);
+		if (time_elapsed > 1000/SCREEN_FPS) {
+			time_elapsed = 0;
+			UpdateTimers();
 		}
 
-		FetchInstruction();
-		draw_flag = 0;
-		ExecuteInsruction(&draw_flag);
+		if (cpu_time_elapsed > 1000/CPU_RATE) {
+			cpu_time_elapsed = 0;
 
-		UpdateTimers();
-		UpdateInput(&running);
+			if (draw_flag == 1) {
+				SDL_RenderClear(renderer);
+				UpdateScreen(renderer);
+				SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+				SDL_RenderPresent(renderer);
 
-		Timer_Part_Two(&frame_ticks, &counted_frames, SCREEN_TICKS_PER_FRAME, cap_timer);
+				//wait for draw instruction to finish
+				SDL_Delay(16);
+			}
+
+			FetchInstruction();
+			draw_flag = 0;
+			ExecuteInsruction(&draw_flag);
+
+			UpdateInput(&running);
+		}
 	}
 
 	SDL_DestroyWindow(window);
