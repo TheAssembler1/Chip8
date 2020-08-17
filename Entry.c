@@ -6,6 +6,7 @@
 #include "Timer.h"
 #include "LiquidClearDisplay.h"
 #include "Input.h"
+#include "Sound.h"
 
 int main(int arc, char* argv[]) {
 	SDL_Window* window;
@@ -21,13 +22,14 @@ int main(int arc, char* argv[]) {
 	const float SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
 
 	Setup();
+	SetupSound();
 
 	window = CreateWindow();
 	renderer = CreateRenderer(window);
 	running = 1;
 
 	SetupMemory();
-	LoadGame("../Chip8/Games/PONG");
+	LoadGame("../Chip8/Games/INVADERS");
 	DumpMemory();
 
 	SetupComputer();
@@ -66,6 +68,7 @@ int main(int arc, char* argv[]) {
 
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
+	CleanupSound();
 
 	return 0;
 }

@@ -4,6 +4,7 @@
 #include "Memory.h"
 #include "LiquidClearDisplay.h"
 #include "Input.h"
+#include "Sound.h"
 
 #define REGISTER_SIZE 16
 #define STACK_SIZE 16

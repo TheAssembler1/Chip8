@@ -157,6 +157,7 @@
     <ClCompile Include="LiquidClearDisplay.c" />
     <ClCompile Include="Memory.c" />
     <ClCompile Include="Setup.c" />
+    <ClCompile Include="Sound.c" />
     <ClCompile Include="Timer.c" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,7 @@
     <ClInclude Include="LiquidClearDisplay.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Setup.h" />
+    <ClInclude Include="Sound.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>

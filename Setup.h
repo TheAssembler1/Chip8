@@ -11,7 +11,7 @@
 #define WINDOW_WIDTH (WINDOW_WIDTH_RES * WINDOW_SCALE)
 #define WINDOW_HEIGHT (WINDOW_HEIGHT_RES * WINDOW_SCALE)
 
-#define SCREEN_FPS 200;
+#define SCREEN_FPS 400;
 
 void Setup();
 SDL_Window* CreateWindow();
